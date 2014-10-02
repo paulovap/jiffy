@@ -113,7 +113,7 @@ init() ->
         {error, _} ->
             EbinDir = filename:dirname(code:which(?MODULE)),
             AppPath = filename:dirname(EbinDir),
-            filename:join(AppPath, "priv");
+            filename:join([AppPath, "priv", "lib"]);
         Path ->
             Path
     end,
